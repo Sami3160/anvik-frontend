@@ -8,6 +8,8 @@ interface User {
   email?: string;
   name?: string;
   spaceIds?: string[];
+  displayName?:string,
+  photo?:string
 }
 
 interface AuthContextType {

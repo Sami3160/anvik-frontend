@@ -5,7 +5,6 @@ import { useAuth } from "@/context/AuthContext"
 import { Avatar } from "@/ui/components/avatar";
 import { Button } from "@/ui/components/button";
 import { Loader } from "lucide-react";
-import { Navigate } from "react-router-dom";
 export default function Chat() {
     const {isAuthenticated, user, loading} =useAuth();
     
@@ -14,7 +13,7 @@ export default function Chat() {
             <div className="flex items-center justify-center h-screen">
                 <div className="flex flex-col items-center gap-5 p-10">
                     <div className="flex items-center gap-2">
-                        <Avatar size="lg" />
+                        <Avatar  style={{ width: 50, height: 50 }} />
                         <div className="flex flex-col items-start gap-1">
                             <div className="text-xl font-bold">Loading...</div>
                             <div className="text-sm">{user?.email}</div>
